@@ -1,0 +1,8 @@
+<div class="editor editor__inner">
+  <h2>Форма редактирования KPI</h2>
+  <hr>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit(editForm.value)">
+      <input id="caption" type="text" formControlName="caption" placeholder="Название">
+      <input id="value" type="text" formControlName="value" placeholder="Значение">
+  </form>
+</div>

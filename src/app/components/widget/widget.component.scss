@@ -1,0 +1,52 @@
+.widget {
+  &__inner {
+    border: 2px solid lightgray;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+    margin: 1em;
+    width: 10em;
+    height: 5em;
+    align-items: center;
+    position: relative;
+    cursor: default;
+    justify-content: space-around;
+
+    &--active {
+      border: 2px solid cornflowerblue;
+    }
+
+    &--disabled {
+      background-color: #ededed;
+    }
+  }
+
+  &__caption {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: small;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__edit-button {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    cursor: pointer;
+  }
+
+  &__value-dimension {
+    color: lightgrey;
+  }
+
+  &__delta {
+    display: flex;
+    flex-direction: row;
+  }
+
+
+}

@@ -1,0 +1,13 @@
+<div class="widget widget__inner" [ngClass]="{'widget__inner--active':isActive,'widget__inner--disabled':isDisabled}">
+  <a class="widget__edit-button" (click)="edit($event)">⚙️</a>
+  <div class="widget__caption">{{widget.caption}}</div>
+  <div>
+    <span>{{widget.value | number :'':'ru_RU'}}</span>
+    <span class="widget__value-dimension" *ngIf="widget.value"> {{widget.valueDimension}}</span>
+  </div>
+  <div class="widget__delta">
+    <app-arrow [value]="widget.delta"></app-arrow>
+    <span class="widget__percent" *ngIf="widget.delta">{{widget.delta | number:'1.2-2'}}%</span>
+    <span *ngIf="!widget.delta">Нет данных</span>
+  </div>
+</div>

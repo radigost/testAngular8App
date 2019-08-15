@@ -1,0 +1,5 @@
+<span class="arrow arrow__inner">
+  <span class="arrow-pointer arrow-pointer--up" *ngIf="value>threshold">&#8593;</span>
+  <span class="arrow-pointer arrow-pointer--straight" *ngIf="value<=threshold && value >=-threshold">&#8593;</span>
+  <span class="arrow-pointer arrow-pointer--down" *ngIf="value<-threshold">&#8593;</span>
+</span>

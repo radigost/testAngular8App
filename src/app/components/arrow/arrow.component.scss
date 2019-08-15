@@ -1,0 +1,19 @@
+.arrow {
+
+}
+
+.arrow-pointer {
+  &--up {
+    color: green;
+  }
+
+  &--straight {
+    color: grey;
+    transform: rotate(90deg);
+  }
+
+  &--down {
+    color: red;
+    transform: rotate(180deg);
+  }
+}
