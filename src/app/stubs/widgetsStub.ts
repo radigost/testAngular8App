@@ -38,6 +38,7 @@ export const widgetStub: IWidget[] = [
   },
   {
     id: 6,
-    caption: 'Shopping Index'
+    caption: 'Shopping Index',
+    isDisabled: true,
   }
 ];

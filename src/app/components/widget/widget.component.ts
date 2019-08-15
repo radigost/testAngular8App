@@ -7,7 +7,7 @@ import {IWidget} from '../../models/iwidget';
   templateUrl: './widget.component.html',
   styleUrls: ['./widget.component.scss']
 })
-export class WidgetComponent  {
+export class WidgetComponent {
   @Input() widget: IWidget;
 
   constructor(private widgetService: WidgetService) {
@@ -15,20 +15,17 @@ export class WidgetComponent  {
 
   edit($event) {
     $event.stopPropagation();
-    this.widgetService.editWidget(this.widget);
+    if (!this.widget.isDisabled) {
+      this.widgetService.editWidget(this.widget);
+    }
   }
 
   get isActive() {
     return this.widgetService.activeWidget.value && this.widget.id === this.widgetService.activeWidget.value.id;
   }
 
-  get isDisabled() {
-    const {value, caption} = this.widget;
-    return !(value && caption);
-  }
-
   @HostListener('click') click() {
-    if (!this.isDisabled) {
+    if (!this.widget.isDisabled) {
       this.widgetService.setActiveWidget(this.widget);
     }
   }

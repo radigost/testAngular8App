@@ -37,6 +37,10 @@
     top: 1px;
     right: 1px;
     cursor: pointer;
+
+    &--disabled{
+      color: grey;
+    }
   }
 
   &__value-dimension {

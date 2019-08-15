@@ -1,5 +1,8 @@
-<div class="widget widget__inner" [ngClass]="{'widget__inner--active':isActive,'widget__inner--disabled':isDisabled}">
-  <a class="widget__edit-button" (click)="edit($event)">⚙️</a>
+<div
+  class="widget widget__inner"
+  [ngClass]="{'widget__inner--active':isActive,'widget__inner--disabled':widget.isDisabled}"
+>
+  <a class="widget__edit-button" [ngClass]="{'widget__edit-button--disabled':widget.isDisabled}" (click)="edit($event)">⚙️</a>
   <div class="widget__caption">{{widget.caption}}</div>
   <div>
     <span>{{widget.value | number :'':'ru_RU'}}</span>
